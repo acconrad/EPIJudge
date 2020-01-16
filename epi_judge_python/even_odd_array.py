@@ -7,8 +7,14 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def even_odd(A):
-    # TODO - you fill in here.
-    return
+    track_even, track_odd = 0, len(A) - 1
+    while track_odd != track_even:
+        if A[track_even] % 2 == 0:
+            track_even += 1
+        else:
+            A[track_even], A[track_odd] = A[track_odd], A[track_even]
+            track_odd -= 1
+    return A
 
 
 @enable_executor_hook

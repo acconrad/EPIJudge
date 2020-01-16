@@ -2,8 +2,18 @@ from test_framework import generic_test
 
 
 def power(x, y):
-    # TODO - you fill in here.
-    return 0.0
+    result = 1.0
+    pwr = y
+    if y < 0:
+        pwr = -pwr
+        x = 1.0/x
+    while pwr:
+        if pwr & 1:
+            result *= x
+        x = x*x
+        pwr >>= 1
+
+    return result
 
 
 if __name__ == '__main__':

@@ -8,8 +8,31 @@ RED, WHITE, BLUE = range(3)
 
 
 def dutch_flag_partition(pivot_index, A):
-    # TODO - you fill in here.
-    return
+    # pivot = A[pivot_index]
+    # new_arr = [pivot]
+    # for n in range(0, len(A)):
+    #     if n == pivot_index:
+    #         continue
+    #     item = A[n]
+    #     if item < pivot:
+    #         new_arr.insert(0, item)
+    #     elif item > pivot:
+    #         new_arr.append(item)
+    #     else:
+    #         new_arr.insert(new_arr.index(pivot) + 1, item)
+    # return new_arr
+    pivot = A[pivot_index]
+    smaller, equal, larger = 0, 0, len(A)
+    while equal < larger:
+        if A[equal] < pivot:
+            A[smaller], A[equal] = A[equal], A[smaller]
+            smaller, equal = smaller + 1, equal + 1
+        elif A[equal] == pivot:
+            equal += 1
+        else:
+            larger -= 1
+            A[equal], A[larger] = A[larger], A[equal]
+    return A
 
 
 @enable_executor_hook
