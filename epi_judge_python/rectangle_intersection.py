@@ -3,9 +3,10 @@ import collections
 from test_framework import generic_test
 from test_framework.test_failure import PropertyName
 
-Rectangle = collections.namedtuple('Rectangle', ('x', 'y', 'width', 'height'))
+Rect = collections.namedtuple('Rect', ('x', 'y', 'width', 'height'))
 
 
+<<<<<<< HEAD
 def intersect_rectangle(R1, R2):
     invalidRect = Rectangle(0, 0, -1, -1)
 
@@ -24,10 +25,15 @@ def intersect_rectangle(R1, R2):
     if rwidth < 0 or rheight < 0:
          return invalidRect
     return Rectangle(rx, ry, rwidth, rheight)
+=======
+def intersect_rectangle(r1: Rect, r2: Rect) -> Rect:
+    # TODO - you fill in here.
+    return Rect(0, 0, 0, 0)
+>>>>>>> f2c94dc79c9b7b162c48dff6b83a7c33f654d9aa
 
 
-def intersect_rectangle_wrapper(R1, R2):
-    return intersect_rectangle(Rectangle(*R1), Rectangle(*R2))
+def intersect_rectangle_wrapper(r1, r2):
+    return intersect_rectangle(Rect(*r1), Rect(*r2))
 
 
 def res_printer(prop, value):
@@ -42,8 +48,7 @@ def res_printer(prop, value):
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main(
-            "rectangle_intersection.py",
-            'rectangle_intersection.tsv',
-            intersect_rectangle_wrapper,
-            res_printer=res_printer))
+        generic_test.generic_test_main('rectangle_intersection.py',
+                                       'rectangle_intersection.tsv',
+                                       intersect_rectangle_wrapper,
+                                       res_printer=res_printer))

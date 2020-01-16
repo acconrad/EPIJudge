@@ -1,5 +1,7 @@
 # EPI Judge
 
+## Beta 5
+
 ## Introduction
 
 EPI Judge consists of the following:
@@ -82,37 +84,35 @@ The IntelliJ Integrated Development environments described above are best-in-cla
 - What compilers are supported for judge?
   - C++
     - Linux
-      - **GCC** 5.4.1
-      - **Clang** 4.0
+      - **GCC** 5.4.1 and newer
+      - **Clang** 4.0 and newer
     - OS X  
-      - **Apple LLVM Clang** 9.0.0
+      - **Apple LLVM Clang** 9.0.0 and newer
     - Windows
-      - **Visual Studio** 2017 15.7.0 Preview 6
-        - Release version of VS2017 contains a bug that makes it impossible to compile judge programs
-      - **MinGW** GCC 5.4.0
-      - **LXSS** (Windows Subsystem for Linux) GCC 5.4.0
+      - **Visual Studio** 2017 and newer
+      - **MinGW** GCC 5.4.0 and newer
+      - **LXSS** (Windows Subsystem for Linux) GCC 5.4.0 and newer
   - Java     
-    - **Java** 9
+    - **Java** 9 and newer
   - Python
-    - **Python** 3.6
+    - **Python** 3.6 and newer
    
 
 - What compilers are supported for solutions?
   - C++
       - Linux
-        - **GCC** 7.0.0
-        - **Clang** 5.0
+        - **GCC** 7.0.0 and newer
+        - **Clang** 5.0 and newer
       - OS X  
-        - **Apple LLVM Clang** 9.0.0
+        - **Apple LLVM Clang** 9.0.0 and newer
       - Windows
-        - **Visual Studio** 2017 15.7.0 Preview 6
-            - Release version of VS2017 contains a bug that makes it impossible to compile judge programs
-        - **MinGW** GCC 7.2.0
-        - **LXSS** (Windows Subsystem for Linux) GCC 7.2.0
+      - **Visual Studio** 2017 and newer
+        - **MinGW** GCC 7.2.0 and newer
+        - **LXSS** (Windows Subsystem for Linux) GCC 7.2.0 and newer
     - Java     
-      - **Java** 9
+      - **Java** 9 and newer
     - Python
-      - **Python** 3.6 
+      - **Python** 3.6 and newer 
 
 Let us know if you managed to compile with an older version.
 
@@ -251,7 +251,7 @@ Then just open `epi_judge_cpp/vs/epi_judge_cpp.sln` solution with Visual Studio 
 | Bootcamp: Hash Tables | anagrams.cc | Anagrams.java | anagrams.py | 
 | Test for palindromic permutations | is\_string\_permutable\_to\_palindrome.cc | IsStringPermutableToPalindrome.java | is\_string\_permutable\_to\_palindrome.py | 
 | Is an anonymous letter constructible? | is\_anonymous\_letter\_constructible.cc | IsAnonymousLetterConstructible.java | is\_anonymous\_letter\_constructible.py | 
-| Implement an ISBN cache | lru\_cache.cc | LRUCache.java | lru\_cache.py | 
+| Implement an ISBN cache | lru\_cache.cc | LruCache.java | lru\_cache.py | 
 | Compute the LCA, optimizing for close ancestors | lowest\_common\_ancestor\_close\_ancestor.cc | LowestCommonAncestorCloseAncestor.java | lowest\_common\_ancestor\_close\_ancestor.py | 
 | Find the nearest repeated entries in an array | nearest\_repeated\_entries.cc | NearestRepeatedEntries.java | nearest\_repeated\_entries.py | 
 | Find the smallest subarray covering all values | smallest\_subarray\_covering\_set.cc | SmallestSubarrayCoveringSet.java | smallest\_subarray\_covering\_set.py | 

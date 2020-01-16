@@ -1,5 +1,9 @@
 import functools
+<<<<<<< HEAD
 import random
+=======
+from typing import List
+>>>>>>> f2c94dc79c9b7b162c48dff6b83a7c33f654d9aa
 
 from test_framework import generic_test
 from test_framework.random_sequence_checker import (
@@ -8,12 +12,18 @@ from test_framework.random_sequence_checker import (
 from test_framework.test_utils import enable_executor_hook
 
 
+<<<<<<< HEAD
 def random_sampling(k, A):
     for i in range(0, k):
         rand_i = random.randint(i, len(A)-1)
         A[i], A[rand_i] = A[rand_i], A[i]
     return A
 
+=======
+def random_sampling(k: int, A: List[int]) -> None:
+    # TODO - you fill in here.
+    return
+>>>>>>> f2c94dc79c9b7b162c48dff6b83a7c33f654d9aa
 
 
 @enable_executor_hook
@@ -36,8 +46,8 @@ def random_sampling_wrapper(executor, k, A):
         }
 
         return check_sequence_is_uniformly_random(
-            [comb_to_idx[tuple(sorted(a))]
-             for a in result], total_possible_outcomes, 0.01)
+            [comb_to_idx[tuple(sorted(a))] for a in result],
+            total_possible_outcomes, 0.01)
 
     run_func_with_retries(
         functools.partial(random_sampling_runner, executor, k, A))
@@ -45,6 +55,6 @@ def random_sampling_wrapper(executor, k, A):
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main("offline_sampling.py",
+        generic_test.generic_test_main('offline_sampling.py',
                                        'offline_sampling.tsv',
                                        random_sampling_wrapper))
